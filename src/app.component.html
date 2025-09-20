@@ -132,11 +132,11 @@
           <ol class="group/list">
             @for(exp of experiences(); track exp.role) {
               <li class="mb-12">
-                <div class="group relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4">
+                <div class="group relative grid gap-4 pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4">
                   <div class="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-gray-50 lg:group-hover:shadow-sm"></div>
-                  <div class="z-10 sm:col-span-2 mb-4 sm:mb-0 sm:mt-1">
-                    @if (exp.logoUrl) {
-                      <img [src]="exp.logoUrl" [alt]="exp.company + ' logo'" class="aspect-video object-contain rounded-lg border-2 border-gray-200/10 bg-white transition group-hover:border-gray-300">
+                  <div class="z-10 sm:order-2 sm:col-span-2">
+                    @if (exp.imageUrl) {
+                      <img [src]="exp.imageUrl" [alt]="exp.company + ' image'" class="rounded border-2 border-gray-200/10 transition group-hover:border-gray-300 w-full h-auto">
                     } @else {
                       <div class="aspect-video rounded-lg border-2 border-gray-200/10 bg-gray-50 flex items-center justify-center transition group-hover:border-gray-300">
                           <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -148,7 +148,7 @@
                   <div class="z-10 sm:col-span-6">
                     <h3 class="font-medium leading-snug text-gray-900">
                       <div>
-                        <a class="inline-flex items-baseline font-medium leading-tight text-gray-900 hover:text-red-700 focus-visible:text-red-700 group/link text-base" href="#" target="_blank" rel="noreferrer noopener">
+                        <a class="inline-flex items-baseline font-medium leading-tight text-gray-900 hover:text-red-700 focus-visible:text-red-700 group/link text-base" [href]="exp.link || '#'" target="_blank" rel="noreferrer noopener">
                           <span class="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"></span>
                           <span>{{exp.role}} · <span class="inline-block">{{exp.company}}</span></span>
                         </a>

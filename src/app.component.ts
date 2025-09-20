@@ -15,7 +15,8 @@ interface Experience {
   company: string;
   period: string;
   details: string[];
-  logoUrl?: string;
+  imageUrl?: string;
+  link?: string;
 }
 
 interface Service {
@@ -30,9 +31,6 @@ interface Certificate {
   description: string[];
   imageUrl: string;
 }
-
-const BINUS_TV_CLUB_LOGO_URL = 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAoHBwgHBgoICAgLCgoLDhgQDg0NDh0VFhEYIx8lJCIfIiEmKzcvJik0KSEiMEExNDk7Pj4+JS5ESUM8SDc9Pjv/2wBDAQoLCw4NDhsQEBw7KCIoOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozv/wAARCAA8AFADASIAAhEBAxEB/8QAGwABAQACAwEAAAAAAAAAAAAAAAYCBwEEBQP/xAAyEAABAwIDBAcIAwAAAAAAAAABAgMEBQAGERIhMUEHExQiUWFxkbEVIjIzNFKBocH/xAAYAQEBAQEBAAAAAAAAAAAAAAAAAQMCBP/EAB0RAQEAAgIDAQEAAAAAAAAAAAABAhEDIRIxQVH/2gAMAwEAAhEDEQA/APcYiIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAqrP6j0+hTHYcmY6p5k2WEtNLcKT3E7JBsfOrVXmfpHT6LddYqNQhB96PI7SOHlqSVOFaglSgFYzZBA3bPLQXRxm+Wb8N9sXzT+F4l8JtjPmn8LxL4T+hGWWpDKHmVpcbWM0rQcpUD3g8RVnL+2M+afwvEvhNsZ80/heJfCb2iC/tjPmn8LxL4TbGfNP4XiXwm9ogv7Yz5p/C8S+E2xn7Q/heJfCb2iC/tjP2h/heJfCbWxnzT+F4l8JvaIL+2M+afwvEvhNsZ80/heJfCb2iC/tjPmn8LxL4V2g1Wg1yS5HhSnFPIGbItpbeX+oJUDmHeNw8atS861vT6LUa1Eq0WU3Enx1BSJCAQpwA5gFYIJB3jxBIIO4lD0BERAREQEREBERAREQEREBERB5l6X+y6v+c/+w1d9Af8AL6n+u9/2grXpf7Lq/wCc/wDsNXfQH/L6n+u9/wBoK1Z/M4+G6oiKkwIiICIiAiIgIiICIiAiIgIiICvO/S9p1bqldpdQpECRLaTGLa+CbKyFBa1EHHuOUg+INenIgi8K/wCHrLTLT8N+Q5IaTmcU2tSEqO8pClAYG+5+JNXGxqRzKfoK+w2NSOZUnQV9huaIK7Y1I5lSdBX2Gx6RzKk6CvsNzRBXbHpHMqToK+w2PSOZUnQV9huaIK7Y9I5lSdBX2Gx6RzKk6CvsNzRBXbHpHMqToK+w2PSOZUnQV9huaIK7Y9I5lSdBX2GxqRzKk6CvsNzRBp2n9OrkPXCHUp0B+NDYiOIK5CChS1rW2QkAkEkBCz4DP2VvSIgIiICIiAiIgIiICIiAiIg//Z';
-const BINUS_SOCS_LOGO_URL = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAbFBMVEX////r6+v29vby8vLq6ur7+/vt7e3s7Oz5+fn09PTu7u7k5OTw8PDl5eXn5+fMzMzW1tbb29vMzMmrq6uwsLCfn5+3t7fAwMDQ0NDf39+kpKTo6Ojj4+Pe3t7Y2Ni7u7usrKyBgYHPz8/ExMSvq6uH2291AAABhElEQVR4nO3c61LCQBSG0UQRBUFA8v5veLNa61g108y8N/v7B+xtD0O23QIAAAAAAAAAAAAAAAAAAAAAAAAAAABg8Nnsvh3E+X25n/N7L+6n+7p/jP2h+2m+M+5n2r/V/l1X9Rfruv6e+j/rfp3+2bV/3d/0r/T/Vm1wmL5eNfN+2G00f3o0f3p4f0r/c/1X3d/0X3f/z77f6Z/R/rX0X3//Xf2r/bfT/zT9p/p96n+v/nF9/e+V/v+9/+/2T/eP9r/Tf6v+tfqb/Sf9/0l/T//59v+r/i/3h+of6T/Wf6n+h/pP9F/rP9h/sv9/09/Sf+X/ffTf6v+t/uH9R/qf6f+rf5T/af6L/Tf6b/cf7P/f9Pf0n+l/3303+r/rf7h/Uf6n+n/q3+U/2n+i/03+m/3H+z/3/T39J/pf999N/q/63+4f1H+p/p/6t/lP9p/ov9N/pv9x/s/9/09/Sf6X/ffTf6v+t/uH9R/qf6f+rf5T/af6L/Tf6b/cf7P/f9Pf0n+l/3303+r/rf7h/Uf6n+n/q3+U/wG/AAYAAAAAAAAAAAAAAAAAAAAAAAAAAAD87B4gD84AFjsDRQAAAABJRU5ErkJggg==';
 
 @Component({
   selector: 'app-root',
@@ -96,7 +94,8 @@ export class AppComponent {
         'Participated in pre-production research and development lifecycle for new What’s In Beken episodes',
         'Creating content designed to boost student engagement and familiarize new students with the BINUS @ Bekasi campus environment.'
       ],
-      logoUrl: 'https://i.ibb.co.com/B2YjSmtV/image.png'
+      imageUrl: 'https://i.ibb.co.com/B2YjSmtV/image.png',
+      link: 'https://www.binus.tv/'
     },
     {
       role: 'Creative and Design Activist',
@@ -106,7 +105,8 @@ export class AppComponent {
         'Developed and designed a variety of posters and visual materials to commemorate national and religious holidays',
         'Stage Decor Designer for TECHNO 2023 the official welcoming party for all new students of School of Computer Science.'
       ],
-      logoUrl: 'https://i.ibb.co.com/mVScJbdP/himti-LOGO-keyen.webp'
+      imageUrl: 'https://i.ibb.co.com/mVScJbdP/himti-LOGO-keyen.webp',
+      link: 'https://i.ibb.co.com/JFkkrG48/image.webp'
     },
      {
       role: 'Volunteer',
@@ -117,7 +117,8 @@ export class AppComponent {
         'Organized creative activities to boost confidence and independence among individuals with mental disabilities',
         'Collaborated with local foundations to reduce stigma around mental health'
       ],
-      logoUrl: 'https://i.ibb.co.com/q32G3PJt/TFISC.webp'
+      imageUrl: 'https://i.ibb.co.com/q32G3PJt/TFISC.webp',
+      link: 'https://i.ibb.co.com/hJJpcX0z/Muhammad-Nauval-Maulana-1-page-0001.webp'
     }
   ]);
   
@@ -195,9 +196,18 @@ export class AppComponent {
       links: [{name: 'See Details', url: 'https://www.kaggle.com/learn/certification/mnauvalmaulana/data-visualization'}],
       skills: ['Data Visualization', 'Python', 'Data Processing'],
       description: [
-        'This quick bootcamp provided me with advanced skills in leveraging the generative AI capabilities of Gemini within the Google AI Studio. I gained hands-on experience in fine-tuning AI models, enabling me to customize their thought processes, control output formats, and define specific AI personas to meet diverse project requirements..',
+        'This quick bootcamp provided me with advanced skills in leveraging the generative AI capabilities of Gemini within the Google AI Studio. I gained hands-on experience in fine-tuning AI models, enabling me to customize their thought processes, control output formats, and define specific AI personas to meet diverse project requirements.',
       ],
       imageUrl: 'https://i.ibb.co.com/nMkjBYQm/dataset-cover.webp'
+    },
+    {
+      title: 'Public Speaking',
+      links: [{name: 'See Details', url: 'https://i.ibb.co.com/7PM1WTG/image.webp'}],
+      skills: ['Public Speaking'],
+      description: [
+        'Through this experience, I gained a deeper understanding that effective communication necessitates charisma. It is not merely about speaking voluminously, but about strategically pausing to engage and connect with the audience. Communication extends beyond verbal delivery; it involves influencing, fostering connections, utilizing appropriate body language, conveying messages clearly, and maintaining positive audience interaction.',
+      ],
+      imageUrl: 'https://i.ibb.co.com/7PM1WTG/image.webp'
     }
   ]);
 }
