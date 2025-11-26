@@ -73,7 +73,7 @@ export class AppComponent {
     { title: 'Business-Driven Developer', description: 'Provide robust software solutions to solve core business challenges, drive growth, and create strategic advantages.' }
   ]);
   
-  technicalSkills = signal(['HTML5', 'Figma', 'JavaScript', 'Generative AI', 'Python', 'React', 'SQL', 'Content Creation']);
+  technicalSkills = signal(['HTML5', 'Figma', 'JavaScript', 'Generative AI', 'Python', 'React', 'SQL', 'Data Processing']);
   interpersonalSkills = signal(['Agile Project Management', 'Team Collaboration', 'Problem Solving', 'Public Speaking']);
 
   education = signal({
